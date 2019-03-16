@@ -1,0 +1,518 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.wrap {
+    width: 400px;
+    height: 600px;
+    margin:50px auto;
+}
+
+.duoraemon {
+    position: relative;
+    height: 650px;
+}
+
+.head {
+    width: 320px;
+    height: 300px;
+    border: 3px solid #333;
+    margin: 5px auto;
+    border-radius: 150px;
+    box-shadow: -8px 10px 50px -20px #000;
+    z-index: 4;
+    /* 放射渐变使头部更立体 */
+    background-image: -webkit-radial-gradient(right top,#fff 10%,#07bbee 20%,#10a6ce 75%,#000);
+    background-image: -moz-radial-gradient(right top,#fff 10%,#07bbee 20%,#10a6ce 75%,#000);
+    background-image: -ms-radial-gradient(right top,#fff 10%,#07bbee 20%,#10a6ce 75%,#000);
+}
+
+.face {
+    width: 265px;
+    height: 195px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -132px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 3;
+}
+
+.eye {
+    width: 152px;
+    height: 82px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -72px;
+    z-index: 4;
+}
+
+.eye .eye_l {
+    width: 72px;
+    height: 82px;
+    border: 2px solid #333;
+    border-radius: 32px;
+    float: left;
+}
+
+.eye .eye_l .eye_l_c {
+    width: 16px;
+    height: 16px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    animation: run 2s ease 0s infinite;
+}
+
+.eye .eye_r {
+    width: 72px;
+    height: 82px;
+    border: 2px solid #333;
+    border-radius: 32px;
+    float: left;
+}
+
+.eye .eye_r .eye_r_c {
+    width: 16px;
+    height: 16px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    animation: run 2s ease 0s infinite;
+}
+
+.nose {
+    width: 30px;
+    height: 30px;
+    border-radius: 14px;
+    background-color: #B84227;
+    border: 2px solid #333;
+    position: absolute;
+    left: 50%;
+    margin-left: -13px;
+    top: 42px;
+}
+
+.nose .light {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    /* 利用阴影偏移量 将阴影投在鼻头上 本体在白色脸部都是白色被隐藏*/
+    box-shadow: -8px 8px 10px 2px #fff;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.philtrum {
+    width: 3px;
+    height: 100px;
+    background-color: #333;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    margin-left: 1.5px;
+}
+
+.mouth {
+    width: 180px;
+    height: 200px;
+    border-bottom: 3px solid #333;
+    border-radius: 90px;
+    position: absolute;
+    top:-25px;
+    left: 50%;
+    margin-left: -90px;
+    z-index: 1;
+}
+
+.whiskers {
+    position: relative;
+}
+
+.whiskers .whisker_l {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background-color: #fff;
+    top: 55px;
+    left: 12px;
+    z-index: 2;
+}
+
+.whiskers .whisker_r {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background-color: #fff;
+    top: 55px;
+    left: 182px;
+    z-index: 2;
+}
+
+.whiskers .whisker{
+    width: 70px;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 25px;
+}
+
+.l200 {
+    -webkit-transform: rotate(200deg);
+    -moz-transform: rotate(200deg);
+    -ms-transform: rotate(200deg);
+}
+
+.l160 {
+    -webkit-transform: rotate(160deg);
+    -moz-transform: rotate(160deg);
+    -ms-transform: rotate(160deg);
+}
+
+.r200 {
+    -webkit-transform: rotate(-200deg);
+    -moz-transform: rotate(-200deg);
+    -ms-transform: rotate(-200deg);
+}
+
+.r160 {
+    -webkit-transform: rotate(-160deg);
+    -moz-transform: rotate(-160deg);
+    -ms-transform: rotate(-160deg);
+}
+
+/* 项圈样式 */
+.collar {
+    width: 200px;
+    height: 20px;
+    border-radius: 15px;
+    border: 2px solid #333;
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    margin-left: -100px;
+    background-image: -webkit-linear-gradient(top,#942D1D,#B34027,#942D1D);
+    z-index: 3;
+}
+
+.collar .bell {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -18px;
+    background-color: #C5B93E;
+    box-shadow: -10px 10px 50px -10px #000;
+}
+
+.collar .bell .bell_light {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    box-shadow: -30px -20px 10px #fff;
+    position: absolute;
+    left: 53px;
+    top: 26px;
+    z-index: 1;
+}
+
+.collar .bell .bell1 {
+    width: 32px;
+    height: 2px;
+    border: 2px solid #333;
+    position: absolute;
+    top: 8px;;
+    z-index: 1;
+} 
+
+.collar .bell .bell2 {
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -6px;
+}
+
+.collar .bell .bell3 {
+    width: 3px;
+    height: 12px;
+    background-color: #000;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+/* 身体样式 */
+.body {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #333;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    margin-left: -100px;
+    z-index: 1;
+    background-color: #0CB1DF;
+    /* background-image: -webkit-radial-gradient(right top,#07bbee ,#10a6ce);
+    background-image: -moz-radial-gradient(right top,#fff 10%,#07bbee 20%,#10a6ce 75%,#000);
+    background-image: -ms-radial-gradient(right top,#fff 10%,#07bbee 20%,#10a6ce 75%,#000);
+ */
+}
+
+.belly {
+    width: 170px;
+    height: 170px;
+    border: 2px solid #333;
+    background-color: #fff;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -85px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 30px -10px #000;
+    z-index: 2;
+}
+
+.bellyband {
+    width: 120px;
+    height: 60px;
+    border-radius: 0 0 60px 60px;
+    border: 2px solid #333;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -60px;
+    z-index: 5;
+}
+/* 
+@keyframes happy {
+    0%{
+        width: 60px;
+        height: 60px;
+    }     
+    100% {
+        width: 56px;
+        height: 56px;
+    }
+}
+ */
+
+.leftHand {
+    width: 50px;
+    height: 150px;
+    position: absolute;
+    -webkit-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    z-index: 0;
+    
+}
+
+.arm_l{
+    width: 50px;
+    height: 90px;
+    border: 2px solid #333;
+    position: absolute;
+    left: -28px;
+    top: -60px;
+    background: #0CB1DF;
+
+}
+
+.armAdorn_l {
+    width: 3px;
+    height: 50px;
+    background: #0CB1DF;
+    z-index: 1;
+    position: absolute;
+    left: 100px;
+    top: 282px;
+}
+
+.palm_l {
+    width: 60px;
+    height: 60px;
+    border-radius: 28px;
+    background-color: #fff;
+    border: 2px solid #333;
+    position: absolute;
+    left: -34px;
+    top: 0px;
+    box-shadow: 0px 10px 28px -10px #000;
+    /* animation: happy 0.5s linear 0s infinite alternate; */
+}
+
+.rightHand {
+    width: 50px;
+    height: 150px;
+    position: absolute;
+    left: 360px;
+    top: 285px;
+    -webkit-transform: rotate(-60deg);
+    -ms-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    z-index: 0;
+}
+
+.arm_r{
+    width: 50px;
+    height: 90px;
+    border: 2px solid #333;
+    position: absolute;
+    left: 0px;
+    top: -60px;
+    background: #0CB1DF;
+
+}
+
+.armAdorn_r {
+    width: 3px;
+    height: 50px;
+    background: #0CB1DF;
+    z-index: 1;
+    position: absolute;
+    left: 302px;
+    top: 282px;
+}
+
+.palm_r {
+    width: 60px;
+    height: 60px;
+    border-radius: 28px;
+    background-color: #fff;
+    border: 2px solid #333;
+    position: absolute;
+    left: -4px;
+    top: 4px;
+    box-shadow: -10px -5px 28px -10px #000;
+}
+
+.footer {
+    width: 264px;
+    height: 40px;
+    position: absolute;
+    top: 464px;
+    left: 50%;
+    margin-left: -127px;
+    z-index: 2;
+}
+
+.footer .leftFooter{
+    width: 115px;
+    height: 30px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius:  20px 15px 15px 15px;
+    z-index: 2;
+    box-shadow: 0px 5px 28px -10px #000;
+    position: absolute;
+    left: 0;
+}
+
+.footer .footer_c {
+    width: 26px;
+    height: 13px;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    left: 50%;
+    margin-left: -13px;
+    border-bottom: 3px solid #333;
+    background-color: #fff;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    box-shadow: -32px 100px 30px -10px #000;
+}
+
+.footer .rightFooter {
+    width: 115px;
+    height: 30px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius:  20px 15px 15px 15px;
+    z-index: 2;
+    box-shadow: 0 5px 28px -10px #000;
+    position: absolute;
+    right: 1px;
+}
+
+/* 眼睛动 */
+@-webkit-keyframes run {
+    70%{
+        margin:0 0 0 0;
+    }
+    80% {
+        margin: -22px 0 0 0;
+    }
+    85% {
+        margin: -22px 0 0 5px;
+    } 
+    90% {
+        margin: -22px 10px 0 0;
+    }
+    93% {
+        margin: -22px 0 0 0;
+    }
+    96% {
+        margin: 0 0 0 0;
+    }
+}
+
+@-moz-keyframes run {
+    70%{
+        margin:0 0 0 0;
+    }
+    80% {
+        margin: -22px 0 0 0;
+    }
+    85% {
+        margin: -22px 0 0 5px;
+    } 
+    90% {
+        margin: -22px 10px 0 0;
+    }
+    93% {
+        margin: -22px 0 0 0;
+    }
+    96% {
+        margin: 0 0 0 0;
+    }
+}
+
+@keyframes run {
+    70%{
+        margin:0 0 0 0;
+    }
+    80% {
+        margin: -22px 0 0 0;
+    }
+    85% {
+        margin: -22px 0 0 5px;
+    } 
+    90% {
+        margin: -22px 10px 0 0;
+    }
+    93% {
+        margin: -22px 0 0 0;
+    }
+    96% {
+        margin: 0 0 0 0;
+    }
+}
+
+
